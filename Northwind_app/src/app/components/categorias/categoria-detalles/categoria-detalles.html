@@ -1,0 +1,12 @@
+<h2>Detalles de Categoría</h2>
+
+<div *ngIf="detalleCategoria; else sinDatos">
+    <div class="mb-3"><strong>ID:</strong> {{ detalleCategoria.categoryId }}</div>
+    <div class="mb-3"><strong>Nombre:</strong> {{ detalleCategoria.categoryName }}</div>
+    <div class="mb-3"><strong>Descripción:</strong> {{ detalleCategoria.description }}</div>
+    <a routerLink="/categorias/listado" class="btn btn-secondary">Regresar</a>
+</div>
+
+<ng-template #sinDatos>
+    <p>No se encontraron datos de la categoría.</p>
+</ng-template>

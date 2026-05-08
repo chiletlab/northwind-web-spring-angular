@@ -1,0 +1,119 @@
+<main class="wrapper_producto_crear">
+  <section class="header">
+    <h1 class="title">
+      <i class="fa-solid fa-cash-register"></i>
+      Registrar Producto
+    </h1>
+
+    <div class="group">
+      <a class="button" routerLink="/home"> <i class="fa-solid fa-house"></i> Volver Inicio </a>
+      <a class="button" routerLink="/productos/listado">
+        <i class="fa-solid fa-backward-step"></i> Volver al Listado
+      </a>
+    </div>
+  </section>
+
+  <section class="body">
+    <form (ngSubmit)="guardar()" #form="ngForm">
+      <article class="inputs-group">
+        <div class="group">
+          <label>Nombre del Producto</label>
+          <input
+            type="text"
+            placeholder="Ej: Chai"
+            name="productName"
+            [(ngModel)]="nuevoProducto.productName"
+            required
+          />
+        </div>
+
+        <div class="group">
+          <label>Proveedor</label>
+          <select name="supplierId" [(ngModel)]="nuevoProducto.supplierId" required>
+            <option [value]="0">Seleccione un proveedor</option>
+            <option *ngFor="let p of proveedores" [value]="p.supplierId">
+              ({{ p.supplierId }}) {{ p.companyName }}
+            </option>
+          </select>
+        </div>
+      </article>
+      <article class="inputs-group">
+        <div class="group">
+          <label>Categoría</label>
+          <select name="categoryId" [(ngModel)]="nuevoProducto.categoryId" required>
+            <option [value]="0">Seleccione una categoría</option>
+            <option *ngFor="let c of categorias" [value]="c.categoryId">
+              ({{ c.categoryId }}) {{ c.categoryName }}
+            </option>
+          </select>
+        </div>
+
+        <div class="group">
+          <label>Cantidad por Unidad</label>
+          <input
+            type="text"
+            placeholder="Ej: 10 cajas x 20 bolsas"
+            name="quantityPerUnit"
+            [(ngModel)]="nuevoProducto.quantityPerUnit"
+          />
+        </div>
+      </article>
+      <article class="inputs-group">
+        <div class="group md">
+          <label>Precio Unitario</label>
+          <input
+            type="number"
+            placeholder="Ingrese un valor"
+            name="unitPrice"
+            [(ngModel)]="nuevoProducto.unitPrice"
+            min="0"
+          />
+        </div>
+
+        <div class="group md">
+          <label>Unidades en Stock</label>
+          <input
+            type="number"
+            placeholder="Ingrese un valor"
+            name="unitsInStock"
+            [(ngModel)]="nuevoProducto.unitsInStock"
+            min="0"
+          />
+        </div>
+
+        <div class="group md">
+          <label>Unidades en Pedido</label>
+          <input
+            type="number"
+            placeholder="Ingrese un valor"
+            name="unitsOnOrder"
+            [(ngModel)]="nuevoProducto.unitsOnOrder"
+            min="0"
+          />
+        </div>
+      </article>
+      <article class="inputs-group">
+        <div class="group md">
+          <label>Nivel de Reorden</label>
+          <input
+            type="number"
+            placeholder="Ingrese un valor"
+            name="reorderLevel"
+            [(ngModel)]="nuevoProducto.reorderLevel"
+            min="0"
+          />
+        </div>
+      </article>
+
+      <article class="button-group">
+        <button type="submit" [disabled]="form.invalid">
+          <i class="fa-regular fa-square-plus"></i> Guardar
+        </button>
+
+        <a type="button" routerLink="/productos/listado" class="btn btn-secondary">
+          Salir
+        </a>
+      </article>
+    </form>
+  </section>
+</main>

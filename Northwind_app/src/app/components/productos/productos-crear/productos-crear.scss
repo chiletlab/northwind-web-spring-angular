@@ -1,0 +1,332 @@
+/* .wrapper_producto_crear {
+  width: 100vw;
+  height: 100vh;
+
+  > .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+    background-color: #60a0e4;
+    padding: 0px 1vw;
+
+    > .title {
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    > .group {
+      display: flex;
+      align-items: center;
+      gap: 0.5vw;
+
+      > .button {
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        width: 150px;
+        height: 40px;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+
+  > .body {
+    width: 100%;
+    height: 92%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .container {
+      width: 70%;
+      height: 80%;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.521);
+      padding: 15px;
+
+      > article {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .mini-content {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+
+          > label {
+            font-size: 22px;
+            font-family: 'Roboto';
+          }
+
+          > input {
+            width: 90%;
+            border-radius: 5px;
+            height: 45px;
+            border: 1px solid gray;
+            padding-left: 15px;
+            outline: none;
+          }
+
+          > h6 {
+            // display: none;
+            color: red;
+            font-size: 12px;
+            font-family: 'Roboto';
+          }
+
+          > select {
+            width: 90%;
+            border-radius: 5px;
+            height: 45px;
+            border: 1px solid gray;
+            padding-left: 15px;
+            outline: none;
+          }
+        }
+
+        .vaquero {
+          flex-direction: column;
+          width: 33%;
+          height: 75px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+
+          > input {
+            width: 90%;
+            border-radius: 5px;
+            height: 45px;
+            border: 1px solid gray;
+            padding-left: 15px;
+            outline: none;
+          }
+
+          > label {
+            width: 100%;
+            font-size: 22px;
+            font-family: 'Roboto';
+          }
+
+          > h6 {
+            // display: none;
+            color: red;
+            font-size: 12px;
+            font-family: 'Roboto';
+          }
+        }
+      }
+
+      .botones-crear {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+
+        > button {
+          width: 13%;
+          height: 100%;
+          font-size: 20px;
+          border: none;
+          border-radius: 4px;
+          color: white;
+
+          &:first-child {
+            background-color: #498459;
+          }
+
+          &:last-child {
+            background-color: #70747c;
+          }
+        }
+      }
+    }
+  }
+}
+ */
+.wrapper_producto_crear {
+  width: 100vw;
+  height: 100vh;
+
+  > .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+    background-color: #60a0e4;
+    padding: 0px 1vw;
+
+    > .title {
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.5vw;
+      font-weight: 500;
+    }
+
+    > .group {
+      display: flex;
+      align-items: center;
+      gap: 0.5vw;
+
+      > .button {
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2vw;
+        height: 2.2vw;
+        background-color: #fff;
+        border: none;
+        border-radius: 0.5vw;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8vw;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 0px 1vw;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+
+  > .body {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e7e7e7;
+
+    > form {
+      width: 50%;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
+      border-radius: 0.5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5vw;
+      gap: 1vw;
+
+      > .inputs-group {
+        width: 100%;
+        height: 5vw;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+
+        > .group {
+          width: 49%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.2vw;
+          font-family: 'Roboto', sans-serif;
+
+          > label {
+            font-size: 1vw;
+            font-weight: 500;
+            color: #2f3d69;
+          }
+          > input {
+            width: 100%;
+            height: 50%;
+            border: 1px solid gray;
+            border-radius: 0.4vw;
+            padding-left: 0.7vw;
+            font-size: 1vw;
+            outline: none;
+          }
+
+          > select {
+            width: 100%;
+            height: 50%;
+            border: 1px solid gray;
+            border-radius: 0.4vw;
+            padding-left: 0.7vw;
+            font-size: 1vw;
+            outline: none;
+          }
+
+          > h6 {
+            font-size: 0.8vw;
+            color: rgb(255, 0, 0);
+            font-weight: 400;
+          }
+
+          > .hidden {
+            display: none;
+          }
+        }
+
+        > .md {
+          width: 32%;
+        }
+      }
+
+      > .button-group {
+        width: 100%;
+        height: 2.5vw;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5vw;
+
+        > button {
+          width: 20%;
+          border: none;
+          border-radius: 0.5vw;
+          color: #fff;
+          font-family: 'Roboto', sans-serif;
+          font-size: 1vw;
+          cursor: pointer;
+          transition: transform 0.5s ease;
+          &:first-child {
+            background-color: #498459;
+          }
+
+          &:last-child {
+            background-color: #70747c;
+          }
+
+          > i {
+            font-size: 1vw;
+            padding-right: 0.2vw;
+          }
+
+          &:hover {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}

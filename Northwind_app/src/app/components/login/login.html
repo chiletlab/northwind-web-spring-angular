@@ -1,0 +1,30 @@
+<main class="login">
+  <form (ngSubmit)="login()" #loginForm="ngForm" class="login_card">
+    <h2>Bienvenido</h2>
+    <p class="subtitle">Inicie sesión para continuar</p>
+
+    <div class="input_group">
+      <label>Dirección de correo electrónico</label>
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        required
+        placeholder="Ej.: pedro@gmail.com"
+      />
+    </div>
+
+    <div class="input_group">
+      <label>Contraseña</label>
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+        placeholder="Ingrese su contraseña"
+      />
+    </div>
+
+    <button class="btn_login" type="submit" [disabled]="loginForm.invalid">Iniciar sesión</button>
+  </form>
+</main>

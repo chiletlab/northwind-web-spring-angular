@@ -1,0 +1,144 @@
+<div class="supplier-page">
+  <div class="supplier-card">
+    <div class="supplier-header">
+      <div class="supplier-icon">🏢</div>
+      <div>
+        <h2>Registro de Proveedor</h2>
+        <p>Completa la información para crear un nuevo proveedor</p>
+      </div>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="registrarProveedor(f)" class="supplier-form">
+      <div class="form-group">
+        <label for="companyName">Empresa</label>
+        <input
+          id="companyName"
+          type="text"
+          name="companyName"
+          [(ngModel)]="nuevo.companyName"
+          required
+          #companyName="ngModel"
+          [class.is-invalid]="companyName.invalid && companyName.touched"
+          placeholder="Ej: Exotic Liquids"
+        />
+        <small class="error-text" *ngIf="companyName.invalid && companyName.touched">
+          Complete el campo
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="contactName">Nombre de Contacto</label>
+        <input
+          id="contactName"
+          type="text"
+          name="contactName"
+          [(ngModel)]="nuevo.contactName"
+          required
+          #contactName="ngModel"
+          [class.is-invalid]="contactName.invalid && contactName.touched"
+          placeholder="Ej: Charlotte Cooper"
+        />
+        <small class="error-text" *ngIf="contactName.invalid && contactName.touched">
+          Complete el campo
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="contactTitle">Cargo</label>
+        <input
+          id="contactTitle"
+          type="text"
+          name="contactTitle"
+          [(ngModel)]="nuevo.contactTitle"
+          required
+          #contactTitle="ngModel"
+          [class.is-invalid]="contactTitle.invalid && contactTitle.touched"
+          placeholder="Ej: Purchasing Manager"
+        />
+        <small class="error-text" *ngIf="contactTitle.invalid && contactTitle.touched">
+          Complete el campo
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Dirección</label>
+        <input
+          id="address"
+          type="text"
+          name="address"
+          [(ngModel)]="nuevo.address"
+          required
+          #address="ngModel"
+          [class.is-invalid]="address.invalid && address.touched"
+          placeholder="Ej: 49 Gilbert St."
+        />
+        <small class="error-text" *ngIf="address.invalid && address.touched">
+          Complete el campo
+        </small>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="city">Ciudad</label>
+          <input
+            id="city"
+            type="text"
+            name="city"
+            [(ngModel)]="nuevo.city"
+            required
+            #city="ngModel"
+            [class.is-invalid]="city.invalid && city.touched"
+            placeholder="Ej: London"
+          />
+          <small class="error-text" *ngIf="city.invalid && city.touched">
+            Complete el campo
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="country">País</label>
+          <input
+            id="country"
+            type="text"
+            name="country"
+            [(ngModel)]="nuevo.country"
+            required
+            #country="ngModel"
+            [class.is-invalid]="country.invalid && country.touched"
+            placeholder="Ej: UK"
+          />
+          <small class="error-text" *ngIf="country.invalid && country.touched">
+            Complete el campo
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Teléfono</label>
+        <input
+          id="phone"
+          type="text"
+          name="phone"
+          [(ngModel)]="nuevo.phone"
+          required
+          #phone="ngModel"
+          [class.is-invalid]="phone.invalid && phone.touched"
+          placeholder="Ej: (171) 555-2222"
+        />
+        <small class="error-text" *ngIf="phone.invalid && phone.touched">
+          Complete el campo
+        </small>
+      </div>
+
+      <div class="form-actions">
+        <a routerLink="/proveedores/listado" class="btn btn-secondary-outline">
+          Regresar
+        </a>
+
+        <button type="submit" class="btn btn-primary-modern" [disabled]="f.invalid">
+          Guardar proveedor
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

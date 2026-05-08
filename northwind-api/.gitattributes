@@ -1,0 +1,12 @@
+* text=auto
+
+/mvnw text eol=lf
+*.sh text eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+*.java text diff=java
+*.xml text
+*.properties text
+*.yml text
+*.yaml text

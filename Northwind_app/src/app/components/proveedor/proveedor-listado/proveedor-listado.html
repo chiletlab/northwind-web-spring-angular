@@ -1,0 +1,46 @@
+<main class="wrapper_empleados">
+  <section class="header">
+    <h1 class="title">
+      <i class="fa-solid fa-dolly"></i>
+      Listado de Proveedores
+    </h1>
+
+    <div class="group">
+      <a href="/home" class="button"><i class="fa-solid fa-house"></i>Volver Inicio</a>
+      <a href="/proveedores/crear" class="button"
+        ><i class="fa-solid fa-circle-plus"></i>Nuevo Proveedor</a
+      >
+    </div>
+  </section>
+  <section class="body">
+    <div class="table-container">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th style="width: 5%">ID</th>
+            <th style="width: 15%">Nombre Compañia</th>
+            <th style="width: 15%">Nombre Contacto</th>
+            <th style="width: 15%">Contacto Titulo</th>
+            <th style="width: 20%">Direccion</th>
+            <th style="width: 10%">Ciudad</th>
+            <th style="width: 10%">Pais</th>
+            <th style="width: 10%">Telefono</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let proveedor of listaProveedor">
+            <td>{{ proveedor.supplierId }}</td>
+            <td>{{ proveedor.companyName }}</td>
+            <td>{{ proveedor.contactName }}</td>
+            <td>{{ proveedor.contactTitle }}</td>
+            <td>{{ proveedor.address }}</td>
+            <td>{{ proveedor.city }}</td>
+            <td>{{ proveedor.country }}</td>
+            <td>{{ proveedor.phone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>

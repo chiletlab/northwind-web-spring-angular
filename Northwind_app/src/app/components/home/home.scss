@@ -1,0 +1,221 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  > .header {
+    width: 100%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 10vw;
+    background-color: #3162ba;
+    font-family: 'Roboto', sans-serif;
+
+    > .title {
+      text-decoration: none;
+      font-size: 1.2vw;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    > .group {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1vw;
+      width: 60%;
+
+      > .navegacion {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        justify-content: flex-end;
+        gap: 2vw;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        > li {
+          display: flex;
+          align-items: center;
+          gap: 0.2vw;
+          font-size: 1vw;
+
+          > i {
+            font-size: 0.8vw;
+          }
+
+          > a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            transition: font-weight 0.5s ease;
+          }
+
+          cursor: pointer;
+          transition: font-weight 0.5s ease;
+          &:hover {
+            font-weight: 600;
+
+            > a {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      > .login {
+        width: 7vw;
+        height: 1.8vw;
+        border: none;
+        border-radius: 0.2vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2vw;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8vw;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+
+        > i {
+          font-size: 0.9vw;
+        }
+
+        &:hover {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+
+  > .body {
+    width: 100%;
+    height: 84%;
+    background-color: #f2f2f2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    > .text {
+      width: 100%;
+      height: 40%;
+      background-color: #f7f6fd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5vw;
+
+      > h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.8vw;
+        font-weight: 800;
+        color: #1d77ff;
+        > span {
+          color: #2a54ac;
+          font-weight: 600;
+        }
+      }
+
+      > .description {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vw;
+        width: 100%;
+        > p {
+          font-family: 'Roboto', sans-serif;
+          text-align: center;
+          font-weight: 400;
+          font-size: 1vw;
+
+          &:nth-child(2) {
+            color: #7f89d6;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    > .cards {
+      width: 100%;
+      height: 60%;
+      background-color: #fffeff;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      > .card {
+        width: 15%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px #bed5ee;
+        font-family: 'Roboto', sans-serif;
+
+        > .valor {
+          color: #7f89d6;
+          font-size: 2.5vw;
+        }
+
+        > .title {
+          width: 100%;
+          text-align: center;
+          font-size: 1vw;
+          color: #333333;
+        }
+      }
+    }
+  }
+
+  > .footer {
+    width: 100%;
+    height: 10%;
+    background-color: #0a0a21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+
+    > .social-media {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 1vw;
+
+      > i {
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+
+    > .copy-right {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+
+      > p {
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        > span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

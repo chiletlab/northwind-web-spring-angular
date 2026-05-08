@@ -1,0 +1,47 @@
+<main class="wrapper_categoria">
+  <section class="header">
+    <h1 class="title">
+      <i class="fa-solid fa-dolly"></i>
+      Listado de Categorias
+    </h1>
+    <div class="group">
+      <a href="/home" class="button"><i class="fa-solid fa-house"></i>Volver Inicio</a>
+      <a href="/categorias/crear" class="button"
+        ><i class="fa-solid fa-circle-plus"></i>Nueva Categoría</a
+      >
+    </div>
+  </section>
+  <section class="body">
+    <div class="table-container">
+      <table class="product-table">
+        <thead>
+          <tr>
+            <th style="width: 10%">ID</th>
+            <th style="width: 15%">Nombre</th>
+            <th style="width: 60%">Descripcion</th>
+            <th style="width: 20%">Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let categoria of categorias">
+            <td>{{ categoria.categoryId }}</td>
+            <td>{{ categoria.categoryName }}</td>
+            <td>{{ categoria.description }}</td>
+            <td>
+              <a
+                [routerLink]="['/categorias/editar', categoria.categoryId]"
+                class="btn btn-warning"
+              >
+                Editar
+              </a>
+              <a [routerLink]="['/categorias/detalles', categoria.categoryId]" class="btn btn-info">
+                Detalles
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
