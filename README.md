@@ -114,8 +114,8 @@ spring.jpa.hibernate.ddl-auto=none
 
 ## Requirements
 
-- Java 17+
-- Node.js 18+
+- Java 21+
+- Node.js 24+
 - Angular CLI
 - SQL Server
 
